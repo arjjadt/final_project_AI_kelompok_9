@@ -1,0 +1,69 @@
+============================================================
+PANDUAN PENGGUNA: SIMULASI UTILITY-BASED MULTI-AGENT SYSTEM
+Nama Kelompok: [Tulis Nama Kelompok Anda]
+============================================================
+
+1. PERSYARATAN SISTEM (SYSTEM REQUIREMENTS)
+----------------------
+- Browser: Google Chrome / Mozilla Firefox / Edge.
+- Platform: Google Colab (Direkomendasikan) atau Jupyter Notebook (Lokal).
+- Koneksi Internet: Diperlukan untuk eksekusi Google Colab.
+- Versi Python: 3.7 atau lebih tinggi.
+
+2. LIBRARY YANG DIBUTUHKAN (REQUIRED LIBRARIES)
+---------------------
+Simulasi ini menggunakan library Python berikut. Jika dijalankan di Google Colab, 
+library ini sudah terinstal atau akan diinstal melalui skrip:
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- requests (untuk mengunduh data peta secara otomatis)
+
+3. INSTALASI & PENGATURAN (GOOGLE COLAB)
+--------------------------------------
+Langkah 1: Buka tautan file .ipynb yang disediakan atau unggah file 
+           Multi_Agent_Simulation.ipynb ke Google Drive Anda.
+Langkah 2: Buka file menggunakan Google Colaboratory.
+Langkah 3: Pastikan runtime terhubung (Klik "Connect" di kanan atas).
+
+4. CARA MENGOPERASIKAN APLIKASI
+---------------------------------
+Aplikasi ini dirancang sebagai notebook sekuensial. Ikuti langkah-langkah berikut:
+
+Langkah 1: JALANKAN BAGIAN 1 (Setup)
+   - Eksekusi cell untuk mengimpor libraries (numpy, pandas, dll.).
+   - Eksekusi cell yang berisi classes mapf_utils dan DistTable.
+   - Langkah ini mempersiapkan lingkungan simulasi (simulation environment).
+
+Langkah 2: JALANKAN BAGIAN 2 (Architecture Design)
+   - Eksekusi cell yang berisi Class PIBT. 
+   - Langkah ini mengompilasi logika agent (fungsi Reasoning, Planning, dan Utility).
+
+Langkah 3: JALANKAN BAGIAN 3 (Visualization Setup)
+   - Eksekusi cell untuk mengunduh raw data (.map dan .scen) dari repositori https://github.com/Kei18/pypibt/tree/main.
+   - Konfirmasi bahwa pesan "Map Loaded" muncul.
+
+Langkah 4: JALANKAN BAGIAN 4 (Main Simulation)
+   - Eksekusi cell loop simulasi utama.
+   - Pantau progress bar atau output log.
+   - Tunggu hingga pesan "All agents reached goals!" atau "Max Time Reached" muncul.
+
+Langkah 5: JALANKAN BAGIAN 5 (Evaluation)
+   - Eksekusi cells terakhir untuk menghasilkan visualisasi.
+   - Aplikasi akan menampilkan:
+     a. Pie Chart (Tingkat Keberhasilan/Success Rate)
+     b. Histogram (Distribusi Baterai)
+   - Aplikasi akan secara otomatis menyimpan dataset bernama 
+     multi_agent_simulation_log.csv di panel file.
+
+5. PEMECAHAN MASALAH (TROUBLESHOOTING)
+------------------
+- Masalah: "FileNotFoundError" untuk file peta.
+  Solusi: Jalankan ulang cell "Download Data" untuk memastikan file mentah berhasil diambil.
+- Masalah: "NameError" (misalnya, PIBT is not defined).
+  Solusi: Pastikan Anda menjalankan cells secara berurutan dari atas ke bawah.
+
+============================================================
+Akhir Panduan
+============================================================
